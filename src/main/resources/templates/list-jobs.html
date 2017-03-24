@@ -12,6 +12,37 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <div>
+        <h3 th:text="${amount}"></h3>
+
+        <div>
+            <table class="job-listing" th:each="table : ${tables}">
+                <tbody>
+                <tr>
+                    <td>Position Type</td>
+                    <td th:text="${table.get('position type')}"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td th:text="${table.get('name')}"></td>
+                </tr>
+                <tr>
+                    <td>Employer</td>
+                    <td th:text="${table.get('employer')}"></td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td th:text="${table.get('location')}"></td>
+                </tr>
+                <tr>
+                    <td>Core Competency</td>
+                    <td th:text="${table.get('core competency')}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </div>
 
 </body>
